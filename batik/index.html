@@ -175,49 +175,72 @@
     </div>
   </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="max-w-6xl mx-auto py-20 px-6">
-    <h3 class="text-3xl font-semibold text-center text-orange-500 mb-10">Kontak</h3>
+<!-- Section Kontak -->
+<section id="kontak" class="py-16 sm:py-20 bg-gradient-to-br from-stone-100 to-amber-50">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 sm:mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-stone-800 mb-6">Kontak Kami</h2>
+        <div class="w-16 sm:w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
+        <p class="text-base sm:text-xl text-stone-600 max-w-3xl mx-auto">Hubungi kami untuk informasi lebih lanjut</p>
+      </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Profil -->
-      <div class="bg-gray-900 border border-gray-700 rounded-xl shadow-lg p-8">
-        <h4 class="text-xl font-semibold text-orange-400 mb-4">Profil Saya</h4>
-        <div class="mt-6 space-y-2 text-sm text-gray-300">
-            <p><strong>Nama:</strong> Satria Anugrah Pratama</p>
-          <p><strong>Email:</strong> ohd8094@gmail.com</p>
-          <p><strong>Telepon:</strong> +62 896-5373-7422</p>
-          <p><strong>Alamat:</strong> Malang, Indonesia</p>
+      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl shadow-xl">
+        <!-- Maps -->
+        <div>
+          <iframe 
+            class="w-full h-80 rounded-2xl shadow-lg" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7903.342039515509!2d112.63321307634834!3d-7.92938699209441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629f1b8a28299%3A0xa995c6171f4fe894!2sSMK%20Negeri%205%20Kota%20Malang!5e0!3m2!1sen!2sus!4v1758937060794!5m2!1sen!2sus" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-amber-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-stone-800 mb-1">Telepon</h3>
+              <p class="text-stone-600">0341-478195</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-amber-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-stone-800 mb-1">Email</h3>
+              <p class="text-stone-600">info@smkn5malang.sch.id</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-amber-100 p-3 rounded-full">
+              <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-stone-800 mb-1">Alamat</h3>
+              <p class="text-stone-600">Jl. Terusan Ikan Piranha Atas No.50, Tunjungsekar, Kec. Lowokwaru, Kota Malang, Jawa Timur 65142</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Formulir Kontak -->
-      <div class="bg-gray-900 border border-gray-700 rounded-xl shadow-lg p-8">
-        <h4 class="text-xl font-semibold text-orange-400 mb-4">Hubungi Saya</h4>
-        <form class="space-y-4">
-          <div>
-            <label for="nama" class="block text-sm mb-1">Nama</label>
-            <input type="text" id="nama" placeholder="Masukkan nama Anda"
-              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500">
-          </div>
-          <div>
-            <label for="email" class="block text-sm mb-1">Email</label>
-            <input type="email" id="email" placeholder="Masukkan email Anda"
-              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500">
-          </div>
-          <div>
-            <label for="pesan" class="block text-sm mb-1">Pesan</label>
-            <textarea id="pesan" rows="4" placeholder="Tulis pesan Anda..."
-              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500"></textarea>
-          </div>
-          <button type="submit"
-            class="w-full py-2 px-4 bg-orange-600 hover:bg-orange-500 rounded-lg font-semibold text-white shadow-lg transition">
-            Kirim Pesan
-          </button>
-        </form>
-      </div>
     </div>
-  </section>
+  </div>
+
+</section>
 
   <!-- Footer -->
   <footer class="bg-black border-t border-orange-600 text-gray-400 py-6">
