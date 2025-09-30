@@ -1,0 +1,22 @@
+/* Animasi slider sederhana */
+.slider {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 15s infinite;
+}
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  63% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  96% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pameran Batik Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-gray-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black shadow-md sticky top-0 z-50 border-b border-orange-600">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-orange-500">Batik Indonesia</h1>
+      <ul class="hidden md:flex gap-6 text-sm font-medium">
+        <li><a href="#home" class="hover:text-orange-400">Home</a></li>
+        <li><a href="#tentang" class="hover:text-orange-400">Tentang</a></li>
+        <li><a href="#sejarah" class="hover:text-orange-400">Sejarah</a></li>
+        <li><a href="#galeri" class="hover:text-orange-400">Galeri</a></li>
+        <li><a href="#kontak" class="hover:text-orange-400">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <!-- Banner Slider -->
+<section id="home" class="relative md:h-[80vh] overflow-hidden">
+  <!-- Wrapper -->
+  <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
+    <!-- Slide 1 -->
+    <div class="slide w-full flex-shrink-0">
+      <img src="MegaMendung'.jpg" alt="Batik Mega Mendung" class="w-full h-full object-cover object-center">
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide w-full flex-shrink-0">
+      <img src="kawung.jpg" alt="Batik Kawung" class="w-full h-full object-cover object-center">
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide w-full flex-shrink-0">
+      <img src="lawung.JPG" alt="Batik Lasem" class="w-full h-full object-cover object-center">
+    </div>
+  </div>
+
+  <!-- Tombol Navigasi -->
+  <button id="prev" ></button>
+  <button id="next" ></button>
+</section>
+
+<script>
+  const slider = document.getElementById("slider");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides; 
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  document.getElementById("next").addEventListener("click", () => {
+    showSlide(index + 1);
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    showSlide(index - 1);
+  });
+
+  // Auto play
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 4000); // 4 detik
+</script>
+
+
+    <!-- Overlay text -->
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <h2 class="text-4xl md:text-5xl text-orange-500 font-bold">
+        Pameran Batik Indonesia
+      </h2>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="max-w-6xl mx-auto py-16 px-6">
+    <h3 class="text-3xl font-semibold text-center text-orange-500 mb-6">Tentang Batik Indonesia</h3>
+    <p class="text-lg text-gray-300 leading-relaxed text-center">
+      Batik Indonesia telah menempuh perjalanan panjang sebelum akhirnya dikenal di panggung dunia. Awalnya, batik hanya digunakan dalam lingkungan kerajaan, sebagai simbol status sosial, spiritual, dan filosofi kehidupan. Setiap motif memiliki makna mendalam, misalnya motif Parang yang melambangkan kekuatan, atau Kawung yang mencerminkan kesucian.
+      Seiring berjalannya waktu, batik merambah ke masyarakat luas dan menjadi identitas budaya bangsa. Puncak pengakuan dunia datang pada 2 Oktober 2009, ketika UNESCO secara resmi menetapkan batik sebagai Warisan Budaya Takbenda Dunia. Sejak saat itu, tanggal tersebut diperingati sebagai Hari Batik Nasional di Indonesia.
+      Kini, batik bukan hanya dikenakan di dalam negeri, tetapi juga sering tampil di ajang internasional. Dari New York Fashion Week, Paris Fashion Show, hingga acara kenegaraan di berbagai negara, batik selalu mencuri perhatian karena keindahan motif dan filosofi di baliknya. Banyak desainer dunia bahkan terinspirasi untuk menggabungkan batik dengan gaya modern, sehingga batik tampil elegan sekaligus kontemporer.
+      Batik telah menjelma dari sekadar kain tradisional menjadi ikon budaya global. Ia bukan hanya mewakili keindahan seni tekstil, tetapi juga membawa pesan tentang kebanggaan, identitas, dan persatuan bangsa Indonesia di mata dunia.
+    </p>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="sejarah" class="pt-32 pb-20 container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-orange-500">Sejarah Batik Indonesia</h2>
+      <p class="text-gray-400 mt-2">Perjalanan Panjang Seni Batik dari Masa ke Masa</p>
+    </div>
+
+    <div class="relative border-l-4 border-orange-700 ml-6">
+      <!-- Abad ke-6 -->
+      <div class="mb-10 ml-6">
+        <div class="absolute -left-3 w-6 h-6 bg-orange-500 rounded-full"></div>
+        <p class="text-sm text-gray-400 mb-1">Abad ke-6</p>
+        <div class="bg-gray-900 border border-gray-700 rounded-xl shadow p-5">
+          <h3 class="text-lg font-semibold text-orange-400">Masa Awal</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Pada abad ke-6, motif batik sudah mulai dikenal di Nusantara, terutama sebagai hiasan pada relief candi dan kain ritual.
+          </p>
+        </div>
+      </div>
+      <!-- Abad ke-13 -->
+      <div class="mb-10 ml-6">
+        <div class="absolute -left-3 w-6 h-6 bg-orange-500 rounded-full"></div>
+        <p class="text-sm text-gray-400 mb-1">Abad ke-13</p>
+        <div class="bg-gray-900 border border-gray-700 rounded-xl shadow p-5">
+          <h3 class="text-lg font-semibold text-orange-400">Batik di Masa Kerajaan</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Batik berkembang pesat pada masa Kerajaan Majapahit, digunakan dalam pakaian bangsawan dan upacara adat.
+          </p>
+        </div>
+      </div>
+      <!-- Abad ke-19 -->
+      <div class="mb-10 ml-6">
+        <div class="absolute -left-3 w-6 h-6 bg-orange-500 rounded-full"></div>
+        <p class="text-sm text-gray-400 mb-1">Abad ke-19</p>
+        <div class="bg-gray-900 border border-gray-700 rounded-xl shadow p-5">
+          <h3 class="text-lg font-semibold text-orange-400">Kolonial Belanda</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Batik mulai diperdagangkan secara luas, mendapat pengaruh Eropa baik dalam warna maupun motif.
+          </p>
+        </div>
+      </div>
+      <!-- Abad ke-21 -->
+      <div class="ml-6">
+        <div class="absolute -left-3 w-6 h-6 bg-orange-500 rounded-full"></div>
+        <p class="text-sm text-gray-400 mb-1">Abad ke-21</p>
+        <div class="bg-gray-900 border border-gray-700 rounded-xl shadow p-5">
+          <h3 class="text-lg font-semibold text-orange-400">Warisan Dunia</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Pada tahun 2009, UNESCO menetapkan batik Indonesia sebagai Warisan Budaya Takbenda Dunia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="max-w-7xl mx-auto py-16 px-6">
+    <h3 class="text-3xl font-semibold text-center text-orange-500 mb-10">Galeri Batik</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Item -->
+      <a href="detail.html" class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition overflow-hidden border border-gray-700">
+        <img src="ca0858e4-73f7-45b7-8b49-37729df1f078.png" />
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-orange-400">Batik Lasem</h4>
+          <p class="text-sm text-gray-400">Motif dari batik lasem melambangkan kehidupan, kesuburan, dan keharmonisan.</p>
+        </div>
+      </a>
+      <a href="detail.html" class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition overflow-hidden border border-gray-700">
+        <img src="Batik Kawung.png" />
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-orange-400">Batik Kawung</h4>
+          <p class="text-sm text-gray-400">Motif dari batik kawung kesederhanaan tapi penuh keindahan, mencerminkan kebijaksanaan.</p>
+        </div>
+      </a>
+      <a href="detail.html" class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition overflow-hidden border border-gray-700">
+        <img src="db5f5be0-db11-481f-965f-128e5c584ac2.png" />
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-orange-400">Batik Mega Mendung</h4>
+          <p class="text-sm text-gray-400">Motif dari batik mega mendung melambangkan sikap sabar dalam menghadapi kesulitan hidup.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="max-w-6xl mx-auto py-20 px-6">
+    <h3 class="text-3xl font-semibold text-center text-orange-500 mb-10">Kontak</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Profil -->
+      <div class="bg-gray-900 border border-gray-700 rounded-xl shadow-lg p-8">
+        <h4 class="text-xl font-semibold text-orange-400 mb-4">Profil Saya</h4>
+        <div class="mt-6 space-y-2 text-sm text-gray-300">
+            <p><strong>Nama:</strong> Satria Anugrah Pratama</p>
+          <p><strong>Email:</strong> ohd8094@gmail.com</p>
+          <p><strong>Telepon:</strong> +62 896-5373-7422</p>
+          <p><strong>Alamat:</strong> Malang, Indonesia</p>
+        </div>
+      </div>
+
+      <!-- Formulir Kontak -->
+      <div class="bg-gray-900 border border-gray-700 rounded-xl shadow-lg p-8">
+        <h4 class="text-xl font-semibold text-orange-400 mb-4">Hubungi Saya</h4>
+        <form class="space-y-4">
+          <div>
+            <label for="nama" class="block text-sm mb-1">Nama</label>
+            <input type="text" id="nama" placeholder="Masukkan nama Anda"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm mb-1">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email Anda"
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500">
+          </div>
+          <div>
+            <label for="pesan" class="block text-sm mb-1">Pesan</label>
+            <textarea id="pesan" rows="4" placeholder="Tulis pesan Anda..."
+              class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-orange-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full py-2 px-4 bg-orange-600 hover:bg-orange-500 rounded-lg font-semibold text-white shadow-lg transition">
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-orange-600 text-gray-400 py-6">
+    <div class="max-w-6xl mx-auto text-center text-sm">
+      © 2025 Pameran Batik Indonesia · <span class="text-orange-500">Semua Hak Dilindungi</span>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+</body>
+</html>
